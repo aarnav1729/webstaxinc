@@ -191,124 +191,158 @@
         </div>
       </div>
     </section>
-    <section class="md:px-12 sm:px-8">
-      <div class="border-x border-y border-zinc-800">
-        <div class="mx-auto 2xl:max-w-7xl items-center w-full">
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:items-center gap-px bg-zinc-800"
-          >
-            <div class="p-8 lg:px-10 bg-black h-full">
-              <h2 class="text-3xl tracking-wide xl:text-4xl text-white">
-                Recent projects
-              </h2>
-              <p class="mt-5 text-white tracking-wide">
-                Presenting a snapshot of <span>my most recent work.</span>
-              </p>
-            </div>
-            <div class="h-full flex w-full bg-black">
-              <a
-                href="/"
-                target="_blank"
-                class="flex mx-auto p-8 lg:px-20 w-full justify-between h-full focus:ring-2 bg-zinc-800 rounded-full text-white ease-in-out transform duration-500 ring-inset ring-zinc-800 hover:bg-black text-2xl items-center ring-2"
-                >See more work <span>➜</span></a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="md:px-12 sm:px-8">
+
+    <section class="md:px-12 sm:px-8" x-data="{ openIndex: null }">
       <div class="border-x border-b border-zinc-800">
         <div
           class="grid grid-cols-1 list-none md:grid-cols-4 gap-px bg-zinc-800"
         >
-          <a href="https://kohe.netlify.app/" target="_blank">
+          <!-- Kohe Project -->
+          <div
+            x-data="{ index: 0 }"
+            class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+          >
+            <div class="p-8 lg:px-10 text-center">
+              <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
+                Kohe
+              </h2>
+              <p class="mt-1 text-sm text-zinc-400">UI/UX &amp; Web Dev</p>
+              <button
+                @click="openIndex = (openIndex === index ? null : index)"
+                class="mt-2 text-white text-sm focus:outline-none"
+              >
+                <span x-show="openIndex !== index">Show Image ↓</span>
+                <span x-show="openIndex === index">Hide Image ↑</span>
+              </button>
+            </div>
             <div
-              class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+              class="border-b border-zinc-800"
+              x-show="openIndex === index"
+              x-cloak
             >
-              <div class="p-8 lg:px-10 text-center order-last">
-                <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
-                  Kohe
-                </h2>
-                <p class="mt-1 text-sm text-zinc-400">UI/UX &amp; Web Dev</p>
-              </div>
-              <div class="border-b border-zinc-800">
+              <a href="https://kohe.netlify.app/" target="_blank">
                 <img
                   class="size-32 mx-auto w-full h-full"
                   alt="Kohe"
                   src="./kks.png"
                 />
-              </div>
-            </div> </a
-          ><a
-            href="https://aarnav1729.github.io/tasteofbombay/"
-            target="_blank"
+              </a>
+            </div>
+          </div>
+
+          <!-- Taste of Bombay Project -->
+          <div
+            x-data="{ index: 1 }"
+            class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
           >
+            <div class="p-8 lg:px-10 text-center">
+              <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
+                Taste of Bombay
+              </h2>
+              <p class="mt-1 text-sm text-zinc-400">
+                Logo, Branding &amp; Web Dev
+              </p>
+              <button
+                @click="openIndex = (openIndex === index ? null : index)"
+                class="mt-2 text-white text-sm focus:outline-none"
+              >
+                <span x-show="openIndex !== index">Show Image ↓</span>
+                <span x-show="openIndex === index">Hide Image ↑</span>
+              </button>
+            </div>
             <div
-              class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+              class="border-b border-zinc-800"
+              x-show="openIndex === index"
+              x-cloak
             >
-              <div class="p-8 lg:px-10 text-center order-last">
-                <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
-                  Taste of Bombay
-                </h2>
-                <p class="mt-1 text-sm text-zinc-400">
-                  Logo, Branding &amp; Web Dev
-                </p>
-              </div>
-              <div class="border-b border-zinc-800">
+              <a
+                href="https://aarnav1729.github.io/tasteofbombay/"
+                target="_blank"
+              >
                 <img
                   class="size-32 mx-auto w-full h-full"
                   alt="Taste of Bombay"
                   src="./t.png"
                 />
-              </div>
-            </div> </a
-          ><a
-            href="https://main--premierfoundation.netlify.app/"
-            target="_blank"
+              </a>
+            </div>
+          </div>
+
+          <!-- Premier Foundation Project -->
+          <div
+            x-data="{ index: 2 }"
+            class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
           >
+            <div class="p-8 lg:px-10 text-center">
+              <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
+                Premier Foundation
+              </h2>
+              <p class="mt-1 text-sm text-zinc-400">UI/UX &amp; Web Dev</p>
+              <button
+                @click="openIndex = (openIndex === index ? null : index)"
+                class="mt-2 text-white text-sm focus:outline-none"
+              >
+                <span x-show="openIndex !== index">Show Image ↓</span>
+                <span x-show="openIndex === index">Hide Image ↑</span>
+              </button>
+            </div>
             <div
-              class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+              class="border-b border-zinc-800"
+              x-show="openIndex === index"
+              x-cloak
             >
-              <div class="p-8 lg:px-10 text-center order-last">
-                <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
-                  Premier Foundation
-                </h2>
-                <p class="mt-1 text-sm text-zinc-400">UI/UX &amp; Web Dev</p>
-              </div>
-              <div class="border-b border-zinc-800">
+              <a
+                href="https://main--premierfoundation.netlify.app/"
+                target="_blank"
+              >
                 <img
                   class="size-32 mx-auto w-full h-full"
                   alt="Premier Foundation"
                   src="./pf.png"
                 />
-              </div>
-            </div> </a
-          ><a
-            href="https://aarnav1729.github.io/SnSLandingPage/"
-            target="_blank"
+              </a>
+            </div>
+          </div>
+
+          <!-- Sparks N Sizzles Project -->
+          <div
+            x-data="{ index: 3 }"
+            class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
           >
+            <div class="p-8 lg:px-10 text-center">
+              <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
+                Sparks N Sizzles
+              </h2>
+              <p class="mt-1 text-sm text-zinc-400">Web Dev &amp; SEO</p>
+              <button
+                @click="openIndex = (openIndex === index ? null : index)"
+                class="mt-2 text-white text-sm focus:outline-none"
+              >
+                <span x-show="openIndex !== index">Show Image ↓</span>
+                <span x-show="openIndex === index">Hide Image ↑</span>
+              </button>
+            </div>
             <div
-              class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+              class="border-b border-zinc-800"
+              x-show="openIndex === index"
+              x-cloak
             >
-              <div class="p-8 lg:px-10 text-center order-last">
-                <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
-                  Sparks N Sizzles
-                </h2>
-                <p class="mt-1 text-sm text-zinc-400">Web Dev &amp; SEO</p>
-              </div>
-              <div class="border-b border-zinc-800">
+              <a
+                href="https://aarnav1729.github.io/SnSLandingPage/"
+                target="_blank"
+              >
                 <img
                   class="size-32 mx-auto w-full h-full"
                   alt="Sparks N Sizzles"
                   src="./sns.png"
                 />
-              </div>
+              </a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
+
     <section class="md:px-12 sm:px-8">
       <div class="border-x border-b border-zinc-800">
         <div
