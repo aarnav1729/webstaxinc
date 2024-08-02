@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" class="selection:text-black selection:bg-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Aarnav Singh" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Digital Agency" content="Website Design" />
+
+    <meta name="title" content="Webstax" />
+    <meta name="description" content="#" />
+    <meta name="author" content="Webstax Inc" />
+
+    <meta property="og:title" content="Webstax Inc" />
+    <meta
+      property="og:description"
+      content="Full stack web development agency"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+
+    <title>webstax</title>
+
+    <link rel = "icon" href = "/web.png" type = "image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/web.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/web.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/web.png" />
+    <link rel="mask-icon" href="/web.png" color="#ffffff" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="/web.png" color="#ffffff" />
+    <link href="/class.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link rel="stylesheet" href="/astro1.css" />
+    <link rel="stylesheet" href="/astro2.css" />
+    <style>
+      .logo-marquee {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .logo-track {
+        display: flex;
+        width: calc(24rem * 3);
+        animation: scrollLeft 10s linear infinite;
+      }
+
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(-24rem));
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black 2xl:max-w-7xl mx-auto font-mono">
+    <div class="2xl:max-w-7xl mx-auto lg:px-12">
+      <div class="w-full mx-auto">
+        <div class="logo-marquee overflow-hidden">
+          <div class="logo-track flex">
+            <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+            <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+            <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+            <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+            <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+            <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+            <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+          </div>
+        </div>
+        <div
+          x-data="{ open: false }"
+          class="relative flex flex-col w-full px-8 mx-auto bg-black border-x border-zinc-800 border-b md:items-center md:justify-between md:flex-row"
+        >
+          <div
+            class="flex flex-row items-center justify-between md:justify-start"
+          >
+            <a
+              href="/"
+              title="link to your page"
+              aria-label="your label"
+              class="text-white hover:text-white/50 gap-4 items-center tracking-tighter uppercase inline-flex font-medium ml-2 text-sm"
+            >
+              Webstax
+            </a>
+            <button
+              @click="open = !open"
+              class="inline-flex items-center justify-center p-2 text-white hover:text-blue-500 focus:outline-none focus:text-white md:hidden"
+            >
+              <svg
+                class="size-6"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  :class="{'hidden': open, 'inline-flex': !open }"
+                  class="inline-flex"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+                <path
+                  :class="{'hidden': !open, 'inline-flex': open }"
+                  class="hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <nav
+            :class="{'flex': open, 'hidden': !open}"
+            class="flex-col flex-grow hidden py-12 bg-black md:py-0 md:flex md:items-end justify-center md:flex-row"
+          >
+            <ul
+              class="list-none text-sm md:ml-auto text-white items-center flex flex-col md:flex-row justify-center font-medium text-center md:text-left gap-6"
+            >
+              <li>
+                <a
+                  href="https://calendly.com/aarnavsingh/webstax"
+                  title="calendly"
+                  target="_blank"
+                  aria-label="your label"
+                  class="hover:text-blue-500"
+                >
+                  Demo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linktr.ee/aarnavsingh"
+                  title="@aarnavsingh"
+                  target="_blank"
+                  aria-label="your label"
+                  class="hover:text-blue-500"
+                >
+                  Founder</a
+                >
+              </li>
+          
+              
+              <li>
+                <a
+                  
+                  href="/tally.html"
+                  title="tally"
+                  target="_blank"
+                  aria-label="your label"
+                  class="text-sm py-2 h-16 px-10 focus:ring-2 rounded-full ease-in-out transform duration-500 flex w-full items-center ring-inset font-medium justify-between ring-2 text-white ring-green-600 hover:bg-green-600 hover:text-white"
+                >
+                  Get a Quote</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <section class="md:px-12 sm:px-8">
+      <div class="border-x border-zinc-800">
+        <div class="grid grid-cols-1 lg:grid-cols-2 bg-zinc-800 gap-px">
+          <div class="p-8 lg:px-10 bg-black">
+            <h1 class="text-4xl md:text-6xl xl:text-7xl text-white">
+              Web development subscriptions to scale your business.
+            </h1>
+          </div>
+          <ul
+            class="grid grid-cols-1 text-zinc-300 font-medium xl:text-3xl text-xl tracking-wide items-end lg:grid-cols-2 gap-px group h-full"
+          >
+            <div class="p-8 lg:px-10 bg-green-600 h-full">
+              <p>
+                Webstax streamlines the design process with a fixed monthly rate
+                and limitless design requests.
+              </p>
+            </div>
+            <div class="p-8 lg:px-10 bg-blue-400 text-black h-full justify-end">
+              <p>
+                Say goodbye to phone calls and extensive contracts; reach out to
+                webstax directly at any time.
+              </p>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8">
+      <div class="border-x border-y border-zinc-800">
+        <div class="mx-auto 2xl:max-w-7xl items-center w-full">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:items-center gap-px bg-zinc-800"
+          >
+            <div class="p-8 lg:px-10 bg-black h-full">
+              <h2 class="text-3xl tracking-wide xl:text-4xl text-white">
+                Recent projects
+              </h2>
+              <p class="mt-5 text-white tracking-wide">
+                Presenting a snapshot of <span>my most recent work.</span>
+              </p>
+            </div>
+            <div class="h-full flex w-full bg-black">
+              <a
+                href="/" target="_blank"
+                class="flex mx-auto p-8 lg:px-20 w-full justify-between h-full focus:ring-2 bg-zinc-800 rounded-full text-white ease-in-out transform duration-500 ring-inset ring-zinc-800 hover:bg-black text-2xl items-center ring-2"
+                >See more work <span>➜</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8">
+      <div class="border-x border-b border-zinc-800">
+        <div
+          class="grid grid-cols-1 list-none md:grid-cols-4 gap-px bg-zinc-800"
+        >
+          <a href="https://kohe.netlify.app/" target="_blank">
+            <div
+              class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+            >
+              <div class="p-8 lg:px-10 text-center order-last">
+                <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
+                  Kohe
+                </h2>
+                <p class="mt-1 text-sm text-zinc-400">UI/UX &amp; Web Dev</p>
+              </div>
+              <div class="border-b border-zinc-800">
+                <img
+                  class="size-32 mx-auto w-full h-full"
+                  alt="Kohe"
+                  src="/kks.png"
+                />
+              </div>
+            </div> </a
+          ><a href="https://aarnav1729.github.io/tasteofbombay/" target="_blank">
+            <div
+              class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+            >
+              <div class="p-8 lg:px-10 text-center order-last">
+                <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
+                  Taste of Bombay
+                </h2>
+                <p class="mt-1 text-sm text-zinc-400">
+                  Logo, Branding &amp; Web Dev
+                </p>
+              </div>
+              <div class="border-b border-zinc-800">
+                <img
+                  class="size-32 mx-auto w-full h-full"
+                  alt="Taste of Bombay"
+                  src="/t.png"
+                />
+              </div>
+            </div> </a
+          ><a href="https://main--premierfoundation.netlify.app/" target="_blank">
+            <div
+              class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+            >
+              <div class="p-8 lg:px-10 text-center order-last">
+                <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
+                  Premier Foundation
+                </h2>
+                <p class="mt-1 text-sm text-zinc-400">UI/UX &amp; Web Dev</p>
+              </div>
+              <div class="border-b border-zinc-800">
+                <img
+                  class="size-32 mx-auto w-full h-full"
+                  alt="Premier Foundation"
+                  src="/pf.png"
+                />
+              </div>
+            </div> </a
+          ><a href="https://aarnav1729.github.io/SnSLandingPage/" target="_blank">
+            <div
+              class="h-full pb-0 overflow-hidden bg-black flex flex-col justify-between"
+            >
+              <div class="p-8 lg:px-10 text-center order-last">
+                <h2 class="text-xl mt-4 tracking-wide font-medium text-white">
+                  Sparks N Sizzles
+                </h2>
+                <p class="mt-1 text-sm text-zinc-400">
+                  Web Dev &amp; SEO
+                </p>
+              </div>
+              <div class="border-b border-zinc-800">
+                <img
+                  class="size-32 mx-auto w-full h-full"
+                  alt="Sparks N Sizzles"
+                  src="/sns.png"
+                />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8">
+      <div class="border-x border-b border-zinc-800">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-px bg-zinc-800 lg:items-end"
+        >
+          <div class="bg-violet-600 p-8 lg:p-10 h-full">
+            <span class="text-white">⏤ How it works</span>
+            <h2
+              class="text-2xl tracking-wide text-balance mt-6 font-light lg:text-4xl text-white"
+            >
+              A quick and easy journey to transform your ideas into reality
+            </h2>
+          </div>
+          <div class="p-8 lg:p-10 bg-black h-full">
+            <p class="text-base text-zinc-400 tracking-wide">
+              After subscribing, you and your team will be invited to Breeew
+              kanban board for collaborating with Webstax directly. Starting
+              here, you can have direct, one-on-one chats with the experts and
+              submit as many design requests as you want.
+              <br /><br />
+              We'll close each request one by one, and you can request as many
+              revisions as necessary.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-px bg-zinc-800 lg:grid-cols-4 border-zinc-800 border-x border-b"
+      >
+        <div class="col-span-full lg:col-span-2">
+          <div class="w-full h-full items-center inline-flex p-8 lg:px-10">
+            <h2
+              class="text-4xl tracking-wide md:text-5xl xl:text-7xl text-white"
+            >
+              Exploring a diverse range of services to elevate your brand
+              presence
+            </h2>
+          </div>
+        </div>
+        <div class="bg-black">
+          <div
+            class="p-8 inline-flex items-center border-b bg-green-600 border-zinc-800 w-full"
+          >
+            <p class="text-2xl text-white">Design</p>
+          </div>
+          <div class="divide-y divide-zinc-800">
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Redesigns</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Refactors</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Components</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Landing pages</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Full website</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Open Graphs</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Social media assets</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-black">
+          <div
+            class="p-8 inline-flex items-center border-b bg-blue-400 border-zinc-800 w-full"
+          >
+            <p class="text-2xl text-white">Development</p>
+          </div>
+          <div class="divide-y divide-zinc-800">
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Components</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Blogs</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Design to code</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Landing pages</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Website templates</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Convert to Tailwind CSS</p>
+            </div>
+            <div class="px-8 py-4">
+              <p class="f text-zinc-400 text-sm">⏤Convert to Astro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8">
+      <div class="border-x border-b border-zinc-800">
+        <div class="divide-y divide-zinc-800">
+          <div class="p-8 lg:p-10">
+            <span class="text-white font-medium">⏤ Customers love it</span>
+            <h2 class="lg:text-6xl text-balance py-3 tracking-wide text-white">
+              Hired by design agencies, creators, freelances, universities, and
+              numerous individuals representing companies across diverse
+              industries worldwide.
+            </h2>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-4 bg-zinc-800 gap-px lg:items-start"
+            x-data="{ testimonialActive: 2 }"
+          >
+            <div
+              class="p-8 lg:pl-10 shrink-0 gap-2 h-full flex items-center bg-black"
+            >
+              <button
+                @click.prevent="testimonialActive = 1"
+                class="font-bold rounded-full focus:outline-none ize-12 focus:ring-2 size-12 ring-black ring-offset-black shrink-0"
+                :class="{'h-12 w-12 opacity-70  ': testimonialActive != 1, 'opacity-100  text-black': testimonialActive == 1 }"
+              >
+                <img
+                  class="size-12 rounded-full"
+                  src="https://alfred.lexingtonthemes.com/avatar1.png"
+                  alt="#_"
+                /></button
+              ><button
+                @click.prevent="testimonialActive = 2"
+                class="font-bold rounded-full focus:outline-none focus:ring-2 size-12 ring-black ring-offset-black shrink-0"
+                :class="{'h-12 w-12 opacity-70  ': testimonialActive != 2, 'opacity-100  ': testimonialActive == 2 }"
+              >
+                <img
+                  class="inline-block size-12 rounded-full"
+                  src="https://alfred.lexingtonthemes.com/avatar2.png"
+                  alt="#_"
+                /></button
+              ><button
+                @click.prevent="testimonialActive = 3"
+                class="font-bold rounded-full focus:outline-none focus:ring-2 size-12 ring-black ring-offset-black shrink-0"
+                :class="{'h-12 w-12 opacity-70  ': testimonialActive != 3, 'opacity-100  text-black': testimonialActive == 3 }"
+              >
+                <img
+                  class="inline-block size-12 rounded-full"
+                  src="https://alfred.lexingtonthemes.com/avatar3.png"
+                  alt="#_"
+                />
+              </button>
+            </div>
+            <div
+              class="p-8 lg:px-10 flex flex-col bg-black items-start gap-6 lg:col-span-3"
+            >
+              <div class="flex">
+                <div x-show="testimonialActive == 1" style="display: none">
+                  <p class="text-white text-sm font-medium">Shwetha Reddy</p>
+                  <a href="/" class="text-xs text-zinc-400"
+                    >Founder of Kohe</a
+                  >
+                </div>
+                <div x-show="testimonialActive == 2">
+                  <p class="text-white text-sm font-medium">Raja Singh</p>
+                  <a href="/" class="text-xs text-zinc-400"
+                    >Founder of Taste of Bombay</a
+                  >
+                </div>
+                <div x-show="testimonialActive == 3" style="display: none">
+                  <p class="text-white text-sm font-medium">Vinit Kaur</p>
+                  <a href="/" class="text-xs text-zinc-400">
+                    Founder of Sparks N Sizzles</a
+                  >
+                </div>
+              </div>
+              <div class="text-zinc-400 text-base text-balance">
+                <div
+                  x-show.immediate="testimonialActive === 1"
+                  style="display: none"
+                >
+                  <p
+                    x-show.transition="testimonialActive == 1"
+                    style="display: none"
+                  >
+                    Webstax is a true rarity, effortlessly bridging the realms
+                    of design and coding. His designs are masterfully polished,
+                    striking a perfect balance between being on trend and
+                    remaining distincltly original.
+                  </p>
+                </div>
+                <div x-show.immediate="testimonialActive === 2">
+                  <p x-show.transition="testimonialActive == 2">
+                    Webstax has a great eye for design and he is an absolute
+                    pleasure to work with. I definitely plan on working with him
+                    on future projects of mine. I wholeheartedly recommend him
+                    to anyone seeking standout, quality work.
+                  </p>
+                </div>
+                <div
+                  x-show.immediate="testimonialActive === 3"
+                  style="display: none"
+                >
+                  <p
+                    x-show.transition="testimonialActive == 3"
+                    style="display: none"
+                  >
+                    Webstax is a rare breed of designer & dev that understands
+                    business needs. He leveraged his previous experience to
+                    build out a few landings very quickly for Versoly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8 relative 2xl:max-w-7xl">
+      <div class="border-x border-b border-zinc-800">
+        <div class="grid grid-cols-2 gap-px bg-zinc-800 sm:mx-0 md:grid-cols-4">
+          <div class="bg-black p-6 sm:p-10 items-center flex">
+            <img
+              class=" w-full object-contain"
+              src="/pel.png"
+              alt="premier energies"
+              width="158"
+              height="48"
+            />
+          </div>
+          <div class="bg-black p-6 sm:p-10 items-center flex">
+            <img
+              class=" w-full object-contain"
+              src="/l.png"
+              alt="sparks n sizzles"
+              width="158"
+              height="48"
+            />
+          </div>
+          <div class="bg-black p-6 sm:p-10 items-center flex">
+            <img
+              class=" w-full object-contain"
+              src="/tob.png"
+              alt="taste of bombay"
+              width="158"
+              height="48"
+            />
+          </div>
+          <div class="bg-black p-6 sm:p-10 items-center flex">
+            <img
+              class=" w-full object-contain"
+              src="/k.svg"
+              alt="kohe"
+              width="158"
+              height="48"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8">
+      <div class="border-x border-b border-zinc-800">
+        <div
+          class="grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-zinc-800 overflow-hidden"
+        >
+          <section class="h-full col-span-full lg:col-span-1">
+            <div
+              class="bg-zinc-800 flex flex-col justify-between h-full backdrop-blur-2xl"
+            >
+              <div class="lg:p-10 p-8">
+                <div>
+                  <p class="text-2xl tracking-wide text-white">
+                    Custom design and development bundles with adaptable pricing
+                    to boost your online visibility at any phase.
+                  </p>
+                </div>
+                <p class="text-base text-balance text-zinc-300 lg:mt-8 mt-4">
+                  Join us!
+                </p>
+              </div>
+              <div class="w-full border-t bg-black border-zinc-800">
+                <div class="lg:p-10 p-8">
+                  <p class="text-xl text-white">⏤ One spot left</p>
+                  <div class="mt-4 flex flex-col">
+                    <span
+                      class="text-xs text-zinc-400 tracking-wide font-normal"
+                    >
+                      Project management with
+                      <span class="italic text-white font-medium">Trello</span>,
+                      secure payments with
+                      <span class="italic text-white font-medium">Stripe</span>
+                      and the freedom of
+                      <span class="italic text-white font-medium">
+                        Canceling your subscription anytime:</span
+                      >
+                    </span>
+                  </div>
+                </div>
+                <div class="border-t border-zinc-800">
+                  <a
+                    class="text-sm py-2 h-16 px-10 focus:ring-2 rounded-full bg-zinc-800 hover:bg-transparent text-white ease-in-out transform duration-500 ring-inset inline-flex items-center font-medium justify-between ring-1 ring-zinc-800 w-full"
+                    href="https://calendly.com/aarnavsingh/webstax" target="_blank"
+                    >Book an intro call <span>➜</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col h-full justify-between bg-black">
+            <div class="p-8 lg:p-10">
+              <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2">
+                  <p class="text-lg text-white mt-4 tracking-wide uppercase">
+                    Design + Dev
+                  </p>
+                  <div class="order-first flex gap-3">
+                    <img
+                      class="size-5"
+                      src="/fig.svg"
+                      alt="Figma"
+                    /><img
+                      class="size-5"
+                      src="/astro.svg"
+                      alt="Astro"
+                    /><img
+                      class="size-5"
+                      src="/tail.svg"
+                      alt="Tailwind CSS"
+                    />
+                  </div>
+                  <p class="text-3xl text-white mt-2">
+                    &#8377; 19,999 <span class="text-sm text-zinc-400"> /monthly </span>
+                    <span class="text-zinc-400 italic pt-2 block text-xs">
+                      have a referral? request a discount!
+                    </span>
+                  </p>
+                </div>
+                <p class="text-sm text-white tracking-wide mt-8">
+                  Ideal for startups requiring design and front-end development
+                  services.
+                </p>
+              </div>
+              <div class="mt-6">
+                <p class="text-sm uppercase text-white font-medium">
+                  What you get:
+                </p>
+                <ul
+                  class="flex flex-col mt-4 text-sm text-zinc-400 font-medium gap-y-3"
+                  role="list"
+                >
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Astro.js &amp; Tailwind CSS Code</span>
+                  </li>
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Clean &amp; accessible code</span>
+                  </li>
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Essential SEO</span>
+                  </li>
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Ongoing 24/7 support and year-round maintenance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-full mt-8 border-t border-zinc-800">
+              <a
+                class="text-sm py-2 h-16 px-10 focus:ring-2 rounded-full ease-in-out transform duration-500 flex w-full items-center ring-inset font-medium justify-between ring-2 text-white ring-green-600 hover:bg-green-600 hover:text-white"
+                href="/tally.html" target="_blank"
+              >
+                Get started <span>➜</span>
+              </a>
+            </div>
+          </section>
+          <section class="flex flex-col h-full justify-between bg-black">
+            <div class="p-8 lg:p-10">
+              <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2">
+                  <p class="text-lg text-white mt-4 tracking-wide uppercase">
+                    Design
+                  </p>
+                  <div class="order-first flex gap-3">
+                    <img
+                      class="size-5"
+                      src="/fig.svg"
+                      alt="Figma"
+                    />
+                  </div>
+                  <p class="text-3xl text-white mt-2">
+                    &#8377; 9,999 <span class="text-sm text-zinc-400"> /monthly </span>
+                    <span class="text-zinc-400 italic pt-2 block text-xs">
+                      have a referral? request a discount!
+                    </span>
+                  </p>
+                </div>
+                <p class="text-sm text-white tracking-wide mt-8">
+                  Ideal for emerging businesses requiring continuous design
+                  assistance.
+                </p>
+              </div>
+              <div class="mt-6">
+                <p class="text-sm uppercase text-white font-medium">
+                  What you get:
+                </p>
+                <ul
+                  class="flex flex-col mt-4 text-sm text-zinc-400 font-medium gap-y-3"
+                  role="list"
+                >
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Design in Figma</span>
+                  </li>
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Unlimited requests at the time</span>
+                  </li>
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Unlimited feedback</span>
+                  </li>
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Delivery within 2-3 days</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-full mt-8 border-t border-zinc-800">
+              <a
+                class="text-sm py-2 h-16 px-10 focus:ring-2 rounded-full ease-in-out transform duration-500 flex w-full items-center ring-inset font-medium justify-between ring-2 text-white ring-blue-400 hover:bg-blue-400 hover:text-white"
+                href="/tally.html" target="_blank"
+              >
+                Get started <span>➜</span>
+              </a>
+            </div>
+          </section>
+          <section class="flex flex-col h-full justify-between bg-black">
+            <div class="p-8 lg:p-10">
+              <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2">
+                  <p class="text-lg text-white mt-4 tracking-wide uppercase">
+                    One off
+                  </p>
+                  <div class="order-first flex gap-3">
+                    <img
+                      class="size-5"
+                      src="/fig.svg"
+                      alt="Figma"
+                    /><img
+                      class="size-5"
+                      src="/astro.svg"
+                      alt="Astro"
+                    /><img
+                      class="size-5"
+                      src="/tail.svg"
+                      alt="Tailwind CSS"
+                    />
+                  </div>
+                  <p class="text-3xl text-white mt-2">
+                    &#8377;14,999 <span class="text-sm text-zinc-400"> </span>
+                    <span class="text-zinc-400 italic pt-2 block text-xs">
+                      have a referral? request a discount!
+                    </span>
+                  </p>
+                </div>
+                <p class="text-sm text-white tracking-wide mt-8">
+                  Anyone who wants to work with Webstax but only needs a quick
+                  landing page or redesign!
+                </p>
+              </div>
+              <div class="mt-6">
+                <p class="text-sm uppercase text-white font-medium">
+                  What you get:
+                </p>
+                <ul
+                  class="flex flex-col mt-4 text-sm text-zinc-400 font-medium gap-y-3"
+                  role="list"
+                >
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>2-3 days turnaround time</span>
+                  </li>
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Only design or development</span>
+                  </li>
+                  <li class="flex flex-row items-start gap-2">
+                    ⏤<span>Only two revisions included</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-full mt-8 border-t border-zinc-800">
+              <a
+                class="text-sm py-2 h-16 px-10 focus:ring-2 rounded-full ease-in-out transform duration-500 flex w-full items-center ring-inset font-medium justify-between ring-2 text-white ring-violet-400 hover:bg-violet-400 hover:text-white"
+                href="/tally.html" target="_blank"
+              >
+                Get started <span>➜</span>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8">
+      <div class="border-x divide-y border-b divide-zinc-800 border-zinc-800">
+        <div class="p-8 lg:p-10">
+          <span class="text-white">⏤ FAQs</span>
+          <h2
+            class="text-5xl tracking-wide text-balance md:text-6xl text-white mt-12"
+          >
+            The answers to the most frequently asked questions
+          </h2>
+          <p class="mt-8 text-zinc-400">
+            Can't find your answer? Send an
+            <a
+              class="text-sky-400 hover:text-white duration-200"
+              href="mailto:webstaxx@gmail.com"
+              ><em>email</em></a
+            >
+            and Webstax will get back to you.
+          </p>
+        </div>
+        <div class="flex flex-col gap-px bg-zinc-800">
+          <details class="bg-black">
+            <summary
+              class="w-full p-8 lg:px-10 text-left tracking-wide cursor-pointer text-white focus:text-green-500"
+            >
+              Who runs Webstax?
+            </summary>
+            <div class="text-sm text-zinc-400 px-8 pb-8 lg:px-10">
+              My name is Aarnav Singh, and I'm the Founder and Lead Dev at Webstax. You can find more info about me here: 
+              <a href="https://linktr.ee/aarnavsingh" target="_blank" class="font-bold text-sky-400 hover:text-white duration-200">aarnavsingh.com</a>
+            </div>
+          </details>
+          <details class="bg-black">
+            <summary
+              class="w-full p-8 lg:px-10 text-left tracking-wide cursor-pointer text-white focus:text-green-500"
+            >
+              How do we communicate and manage the project?
+            </summary>
+            <div class="text-sm text-zinc-400 px-8 pb-8 lg:px-10">
+              Webstax uses direct communication with clients via any platform that suits them best. We also employ an agile software development methodolgy for project management that allows us to stay in control of the project timeline!
+            </div>
+          </details>
+          <details class="bg-black">
+            <summary
+              class="w-full p-8 lg:px-10 text-left tracking-wide cursor-pointer text-white focus:text-green-500"
+            >
+              How quickly will I get some work done?
+            </summary>
+            <div class="text-sm text-zinc-400 px-8 pb-8 lg:px-10">
+              Expect the initial concept within 2-3 days, followed by several iterations of
+              revisions until it meets your complete satisfaction. For larger scale
+              projects, the entire process can take up to 4 weeks.
+            </div>
+          </details>
+          <details class="bg-black">
+            <summary
+              class="w-full p-8 lg:px-10 text-left tracking-wide cursor-pointer text-white focus:text-green-500"
+            >
+              Why do you only have two spots?
+            </summary>
+            <div class="text-sm text-zinc-400 px-8 pb-8 lg:px-10">
+              We believe in providing the best possible service to
+              clients, and to ensure that, we have decided to limit the
+              workload to just two projects at a time. This approach allows
+              us to dedicate its full attention and expertise to each
+              project, ensuring quality and timely delivery.
+            </div>
+          </details>
+          <details class="bg-black">
+            <summary
+              class="w-full p-8 lg:px-10 text-left tracking-wide cursor-pointer text-white focus:text-green-500"
+            >
+              What if I don&#39;t like the design?
+            </summary>
+            <div class="text-sm text-zinc-400 px-8 pb-8 lg:px-10">
+              We want you to be happy with the results! Hence the
+              unlimited requests.
+            </div>
+          </details>
+          <details class="bg-black">
+            <summary
+              class="w-full p-8 lg:px-10 text-left tracking-wide cursor-pointer text-white focus:text-green-500"
+            >
+              Are there any refunds?
+            </summary>
+            <div class="text-sm text-zinc-400 px-8 pb-8 lg:px-10">
+              Unfortunately, not. Because of the intense creative demands for
+              delivering top-notch design and development within tight
+              timeframes and the thorough research invested to achieve the best
+              outcomes, wecannot provide our services without
+              compensation. However, we understand the
+              importance of client satisfaction. If, after our initial
+              discussion, it turns out that our services do not align with your
+              needs and no work has been initiated, rest assured that you are
+              eligible for a 100% refund. We value transparency and wants
+              our clients to feel confident in their interactions with us.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="md:px-12 sm:px-8">
+      <div class="border-x border-zinc-800">
+        <div class="p-8 lg:p-10 bg-blue-400 h-full">
+          <h2
+            class="text-5xl tracking-wide text-balance md:text-6xl text-white"
+          >
+            Ready to elevate your design and development game?
+          </h2>
+          <p class="mt-8 text-base text-white tracking-wide">
+            Subscribe now and enjoy the flexibility of the monthly plan - pay
+            only when you need it!
+          </p>
+        </div>
+        <div class="border-t border-zinc-800">
+          <a
+            href="/tally.html"
+            title="get a quote"
+            target="_blank"
+            aria-label="your label"
+            class="text-2xl h-24 px-8 lg:h-32 lg:px-20 focus:ring-2 rounded-full hover:bg-green-600 ease-in-out transform duration-500 ring-inset ring-green-600 inline-flex items-center font-medium bg-black text-white justify-between ring-2 hover:ring-green-600 w-full"
+            >Get started today <span>➜</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="md:px-12 sm:px-8">
+      <div class="border-x border-zinc-800 border-t">
+        <ul
+          role="list"
+          class="text-base gap-px flex-col text-zinc-400 grid grid-cols-2 xl:grid-cols-3 text-center bg-zinc-800"
+        >
+          <li class="bg-black group">
+            <a
+              
+              href="/"
+              target="_blank"
+              title="projects"
+              aria-label="your label"
+              class="group-hover:text-white w-full h-full flex justify-center p-8"
+            >
+              Projects</a
+            >
+          </li>
+          <li class="bg-black group">
+            <a
+              href="/tally.html"
+              target="_blank"
+              title="link to your page"
+              aria-label="your label"
+              class="group-hover:text-white w-full h-full flex justify-center p-8"
+            >
+              Get A Quote</a
+            >
+          </li>
+          <li class="bg-black group">
+            <a
+              href="tel:918143025550"
+              title="phone number"
+              aria-label="your label"
+              class="group-hover:text-white w-full h-full flex justify-center p-8"
+            >
+              Call Us!
+            </a>
+          </li>
+          <li class="bg-black group">
+            <a
+              href="mailto:webstaxx@gmail.com"
+              title="email address"
+              aria-label="your label"
+              class="group-hover:text-white w-full h-full flex justify-center p-8"
+            >
+              Email Us!
+            </a>
+          </li>
+          <li class="bg-black group">
+            <a
+              href="https://webstaxx.netlify.app/"
+              target="_blank"
+              title="webstax"
+              aria-label="your label"
+              class="group-hover:text-white w-full h-full flex justify-center p-8"
+            >
+              @webstax
+            </a>
+          </li>
+          <li class="bg-black group">
+            <a
+              href="https://linktr.ee/aarnavsingh"
+              target="_blank"
+              title="aarnavsingh"
+              aria-label="your label"
+              class="group-hover:text-white w-full h-full flex justify-center p-8"
+            >
+              @aarnavsingh
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <footer class="md:px-12 sm:px-8">
+      <div class="border-x border-zinc-800 border-y">
+        <div class="p-8 lg:px-10 flex flex-col gap-6 text-center uppercase">
+          <p class="text-sm text-white tracking-wide">
+            © 2024 Webstax Inc. All rights reserved
+          </p>
+          <p class="text-base text-zinc-400 lg:col-span-2 text-balance"> Designed and built by
+            <a
+              href="https://linktr.ee/aarnavsingh"
+              title="aarnavsingh"
+              target="_blank"
+              aria-label="your label"
+              class="text-sm text-white hover:text-accent-300"
+              >Aarnav Singh</a
+            >, in
+            Eagan, Minnesota.
+          </p>
+
+          <div class="logo-marquee overflow-hidden">
+            <div class="logo-track flex">
+              <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+              <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+              <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+              <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+              <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+              <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+              <img src="/web.png" alt="Webstax" class="w-24 h-24" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
