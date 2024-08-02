@@ -192,7 +192,11 @@
       </div>
     </section>
 
-    <section class="md:px-12 sm:px-8" x-data="{ openIndex: null }">
+    <section
+      class="md:px-12 sm:px-8"
+      x-data="{ openIndex: null, isMobile: window.innerWidth < 768 }"
+      @resize.window="isMobile = window.innerWidth < 768"
+    >
       <div class="border-x border-b border-zinc-800">
         <div
           class="grid grid-cols-1 list-none md:grid-cols-4 gap-px bg-zinc-800"
@@ -211,13 +215,17 @@
                 @click="openIndex = (openIndex === index ? null : index)"
                 class="mt-2 text-white text-sm focus:outline-none"
               >
-                <span x-show="openIndex !== index">Show Image ↓</span>
-                <span x-show="openIndex === index">Hide Image ↑</span>
+                <span x-show="isMobile && openIndex !== index"
+                  >Show Image ↓</span
+                >
+                <span x-show="isMobile && openIndex === index"
+                  >Hide Image ↑</span
+                >
               </button>
             </div>
             <div
               class="border-b border-zinc-800"
-              x-show="openIndex === index"
+              x-show="!isMobile || openIndex === index"
               x-cloak
             >
               <a href="https://kohe.netlify.app/" target="_blank">
@@ -246,13 +254,17 @@
                 @click="openIndex = (openIndex === index ? null : index)"
                 class="mt-2 text-white text-sm focus:outline-none"
               >
-                <span x-show="openIndex !== index">Show Image ↓</span>
-                <span x-show="openIndex === index">Hide Image ↑</span>
+                <span x-show="isMobile && openIndex !== index"
+                  >Show Image ↓</span
+                >
+                <span x-show="isMobile && openIndex === index"
+                  >Hide Image ↑</span
+                >
               </button>
             </div>
             <div
               class="border-b border-zinc-800"
-              x-show="openIndex === index"
+              x-show="!isMobile || openIndex === index"
               x-cloak
             >
               <a
@@ -282,13 +294,17 @@
                 @click="openIndex = (openIndex === index ? null : index)"
                 class="mt-2 text-white text-sm focus:outline-none"
               >
-                <span x-show="openIndex !== index">Show Image ↓</span>
-                <span x-show="openIndex === index">Hide Image ↑</span>
+                <span x-show="isMobile && openIndex !== index"
+                  >Show Image ↓</span
+                >
+                <span x-show="isMobile && openIndex === index"
+                  >Hide Image ↑</span
+                >
               </button>
             </div>
             <div
               class="border-b border-zinc-800"
-              x-show="openIndex === index"
+              x-show="!isMobile || openIndex === index"
               x-cloak
             >
               <a
@@ -318,13 +334,17 @@
                 @click="openIndex = (openIndex === index ? null : index)"
                 class="mt-2 text-white text-sm focus:outline-none"
               >
-                <span x-show="openIndex !== index">Show Image ↓</span>
-                <span x-show="openIndex === index">Hide Image ↑</span>
+                <span x-show="isMobile && openIndex !== index"
+                  >Show Image ↓</span
+                >
+                <span x-show="isMobile && openIndex === index"
+                  >Hide Image ↑</span
+                >
               </button>
             </div>
             <div
               class="border-b border-zinc-800"
-              x-show="openIndex === index"
+              x-show="!isMobile || openIndex === index"
               x-cloak
             >
               <a
