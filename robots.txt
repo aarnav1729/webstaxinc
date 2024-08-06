@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /private/
+Allow: /public/
+
+Sitemap: https://webstaxinc.vercel.app/sitemap.xml
+Sitemap: https://webstaxinc.netlify.app/sitemap.xml
+Sitemap: https://webstaxx.netlify.app/sitemap.xml
